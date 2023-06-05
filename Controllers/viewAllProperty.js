@@ -1,12 +1,12 @@
 const Property = require('../Models/propertySchema')
 
 async function viewAllProperty(request, response) {
-    const viewProperties = await Property.find({})
+    const data = await Property.find({})
     
     try {
         response.send({
             "status": "success",
-            viewProperties
+            data
         })
     } catch (error) {
         response.send(error)
