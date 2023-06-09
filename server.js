@@ -5,17 +5,19 @@ const connectDB = require('./config/dbConnect')
 const dotenv = require('dotenv')
 
 dotenv.config();
-
-const port = process.env.PORT || 5000
 const app = express();
 
 
-// imported routes
-const propertyRoutes = require('./Routes/propertyRoutes.js')
+const port = process.env.PORT || 5000
 
 // This function is the connection to the database
 connectDB()
 // This function is the connection to the database
+
+
+
+// imported routes
+const propertyRoutes = require('./Routes/propertyRoutes.js')
 
 
 //middleware
